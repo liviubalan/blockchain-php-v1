@@ -73,6 +73,9 @@ Vagrant.configure("2") do |config|
     vb.name = "blockchain-php-node1"
   end
 
+  # The hostname the machine should have.
+  config.vm.hostname = "blockchain-php-node1"
+
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
