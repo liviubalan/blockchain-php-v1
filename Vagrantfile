@@ -59,6 +59,19 @@ Vagrant.configure("2") do |config|
   #
   # View the documentation for the provider you are using for more
   # information on available options.
+  config.vm.provider "virtualbox" do |vb|
+    # Display the VirtualBox GUI when booting the machine
+    # vb.gui = true
+
+    # CPU number
+    vb.cpus = 1
+
+    # The amount of memory
+    vb.memory = 1024
+
+    # VM name
+    vb.name = "blockchain-php-node1"
+  end
 
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
