@@ -27,7 +27,8 @@ $currentBlockData = [
         'recipient' => 'recipient-3',
     ],
 ];
-$nonce = 100;
 
-var_dump($bitcoin->hashBlock($previousBlockHash, $currentBlockData, $nonce));
+$nonce = $bitcoin->proofOfWork($previousBlockHash, $currentBlockData); // number of iterations to find the nonce
+var_dump($nonce);
+var_dump($bitcoin->hashBlock($previousBlockHash, $currentBlockData, $nonce)); // verify the result
 echo '</pre>';
