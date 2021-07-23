@@ -12,6 +12,14 @@ Vagrant.configure("2") do |config|
     end
     subconfig.vm.hostname = "blockchain-php-node1"
     subconfig.vm.provision :shell, path: "provision-shell/bootstrap.sh", privileged: false
+    config.vm.synced_folder ".", "/vagrant",
+      create: false,
+      disabled: false,
+      group: "www-data",
+      mount_options: ["dmode=775,fmode=764"],
+      owner: "vagrant",
+      type: "virtualbox",
+      id: "share-host"
   end
 
   config.vm.define "node2" do |subconfig|
@@ -25,4 +33,12 @@ Vagrant.configure("2") do |config|
     subconfig.vm.hostname = "blockchain-php-node2"
     subconfig.vm.provision :shell, path: "provision-shell/bootstrap.sh", privileged: false
   end
+  config.vm.synced_folder ".", "/vagrant",
+    create: false,
+    disabled: false,
+    group: "www-data",
+    mount_options: ["dmode=775,fmode=764"],
+    owner: "vagrant",
+    type: "virtualbox",
+    id: "share-host"
 end
