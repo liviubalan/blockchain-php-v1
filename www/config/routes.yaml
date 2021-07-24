@@ -5,3 +5,7 @@
 blockchain:
     path: /blockchain
     controller: App\Controller\ApiController::blockchain
+
+transaction:
+    path: /transaction
+    controller: App\Controller\ApiController::transaction
