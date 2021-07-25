@@ -1,11 +1,14 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
-
 blockchain:
     path: /blockchain
     controller: App\Controller\ApiController::blockchain
+    methods: [GET]
 
 transaction:
     path: /transaction
     controller: App\Controller\ApiController::transaction
+    methods: [POST]
+
+mine:
+    path: /mine
+    controller: App\Controller\ApiController::mine
+    methods: [GET]
