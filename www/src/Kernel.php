@@ -64,6 +64,6 @@ class Kernel extends BaseKernel
 
     public function getVarDir(): string
     {
-        return $this->getProjectDir().'/var/'.$_SERVER['HTTP_HOST'];
+        return $this->getProjectDir().'/var/'.gethostname();
     }
 }

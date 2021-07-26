@@ -10,7 +10,7 @@ Vagrant.configure("2") do |config|
       vb.memory = 512
       vb.name = "node1"
     end
-    subconfig.vm.hostname = "node1"
+    subconfig.vm.hostname = "node1.net"
     subconfig.vm.provision :shell, path: "provision-shell/bootstrap.sh", privileged: false
     config.vm.synced_folder ".", "/vagrant",
       create: false,
@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
       vb.memory = 512
       vb.name = "node2"
     end
-    subconfig.vm.hostname = "node2"
+    subconfig.vm.hostname = "node2.net"
     subconfig.vm.provision :shell, path: "provision-shell/bootstrap.sh", privileged: false
     config.vm.synced_folder ".", "/vagrant",
       create: false,
@@ -50,7 +50,7 @@ Vagrant.configure("2") do |config|
       vb.memory = 512
       vb.name = "node3"
     end
-    subconfig.vm.hostname = "node3"
+    subconfig.vm.hostname = "node3.net"
     subconfig.vm.provision :shell, path: "provision-shell/bootstrap.sh", privileged: false
     config.vm.synced_folder ".", "/vagrant",
       create: false,
@@ -70,7 +70,7 @@ Vagrant.configure("2") do |config|
       vb.memory = 512
       vb.name = "node4"
     end
-    subconfig.vm.hostname = "node4"
+    subconfig.vm.hostname = "node4.net"
     subconfig.vm.provision :shell, path: "provision-shell/bootstrap.sh", privileged: false
     config.vm.synced_folder ".", "/vagrant",
       create: false,
@@ -90,7 +90,7 @@ Vagrant.configure("2") do |config|
       vb.memory = 512
       vb.name = "node5"
     end
-    subconfig.vm.hostname = "node5"
+    subconfig.vm.hostname = "node5.net"
     subconfig.vm.provision :shell, path: "provision-shell/bootstrap.sh", privileged: false
     config.vm.synced_folder ".", "/vagrant",
       create: false,
