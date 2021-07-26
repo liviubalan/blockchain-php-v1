@@ -8,9 +8,9 @@ Vagrant.configure("2") do |config|
     subconfig.vm.provider "virtualbox" do |vb|
       vb.cpus = 1
       vb.memory = 1024
-      vb.name = "blockchain-php-node1"
+      vb.name = "node1"
     end
-    subconfig.vm.hostname = "blockchain-php-node1"
+    subconfig.vm.hostname = "node1"
     subconfig.vm.provision :shell, path: "provision-shell/bootstrap.sh", privileged: false
     config.vm.synced_folder ".", "/vagrant",
       create: false,
@@ -28,9 +28,9 @@ Vagrant.configure("2") do |config|
     subconfig.vm.provider "virtualbox" do |vb|
       vb.cpus = 1
       vb.memory = 1024
-      vb.name = "blockchain-php-node2"
+      vb.name = "node2"
     end
-    subconfig.vm.hostname = "blockchain-php-node2"
+    subconfig.vm.hostname = "node2"
     subconfig.vm.provision :shell, path: "provision-shell/bootstrap.sh", privileged: false
   end
   config.vm.synced_folder ".", "/vagrant",
