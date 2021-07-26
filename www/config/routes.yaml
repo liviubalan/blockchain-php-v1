@@ -17,3 +17,8 @@ register_node:
     path: /register-node
     controller: App\Controller\ApiController::registerNode
     methods: [POST]
+
+register_nodes_bulk:
+    path: /register-nodes-bulk
+    controller: App\Controller\ApiController::registerNodesBulk
+    methods: [POST]
