@@ -157,7 +157,7 @@ class ApiController extends AbstractController
         }
 
         $url = $networkNodeUrl.'/register-nodes-bulk';
-        $allNetworkNodes = $this->bitcoin->networkNodes + [$this->bitcoin->currentNodeUrl];
+        $allNetworkNodes = array_merge($this->bitcoin->networkNodes, [$this->bitcoin->currentNodeUrl]);
         $result = $this->httpClient->makePost($url, [
             'allNetworkNodes' => $allNetworkNodes,
         ]);
