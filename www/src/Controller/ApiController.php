@@ -276,6 +276,11 @@ class ApiController extends AbstractController
         ]);
     }
 
+    public function infoTransaction(string $transactionId): JsonResponse
+    {
+        return new JsonResponse($this->bitcoin->getTransaction($transactionId));
+    }
+
     public function test(Request $request): JsonResponse
     {
         $server = $this->container->get('request_stack')->getCurrentRequest()->server;
