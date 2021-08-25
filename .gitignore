@@ -1,5 +1,8 @@
 # Machine data
 /.vagrant/
 
+# Vagrant logs
+*.log
+
 # JetBrains PhpStorm
 .idea/
